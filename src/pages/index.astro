@@ -37,7 +37,7 @@ import { Image, Picture } from '@astrojs/image/components';
 	<body class="relative bg-gray-900">
     
     <!-- BOTÓN WHATSAPP ABAJO A LA IZQUIERDA -->
-    <a href="https://wa.me/+543516472777/?text=Hola, quiero realizar una consulta" target="_blank" class="fixed bottom-6 lg:bottom-10 right-6 lg:right-10 p-3 rounded-full bg-green-500">
+    <a href="https://wa.me/+543516472777/?text=Hola, quiero realizar una consulta" target="_blank" class="fixed bottom-6 lg:bottom-10 right-6 lg:right-10 p-3 rounded-full bg-green-500 z-50">
       <svg 
         class="w-6 h-6 lg:w-8 lg:h-8"
         xmlns="http://www.w3.org/2000/svg" 
@@ -100,7 +100,7 @@ import { Image, Picture } from '@astrojs/image/components';
 
         <!-- FOTO CÓRDOBA -->
         <div class="mx-auto flex max-w-2xl  lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none">
-          <div class="w-full mt-6">
+          <div class="w-full mt-6 lg:-mt-2">
             <Picture 
               src={import("./assets/hero-picture.png")} 
               fit="contain"
