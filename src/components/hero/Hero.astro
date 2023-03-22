@@ -6,6 +6,7 @@ import ContactanosButton from './ContactanosButton';
 import VerAreasButton from './VerAreasButton';
 import MapaCordobaDesktop from '../assets/MapaCordobaDesktop.astro';
 import MapaCordobaMobile from '../assets/MapaCordobaMobile.astro';
+import ReactComponent from '../assets/ReactComponent';
 ---
 
 <style is:global>
@@ -107,7 +108,9 @@ import MapaCordobaMobile from '../assets/MapaCordobaMobile.astro';
           </div>
         </div>
         <div class="translate-y-3 lg:hidden">
-          <MapaCordobaMobile />
+          <ReactComponent client:load>
+            <MapaCordobaMobile />
+          </ReactComponent>
         </div>
         
       </div>
@@ -116,7 +119,9 @@ import MapaCordobaMobile from '../assets/MapaCordobaMobile.astro';
     <!-- FOTO CÓRDOBA -->
     <div class="mx-auto max-w-2xl hidden lg:inline-block lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none">
       <div class="w-full mt-6 lg:-mt-2 relative z-10 ml-20">
-        <MapaCordobaDesktop />
+        <ReactComponent client:load>
+          <MapaCordobaDesktop />
+        </ReactComponent>
       </div>
     </div>
 
