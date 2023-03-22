@@ -2,6 +2,8 @@
 import BgLightColor2 from './bgLightColorContent';
 import LineaEnContenido from './LineaEnContenido';
 import MedioDeContactoAnimado from './MedioContactoAnimado';
+import TextoAnimado from './TextoAnimado';
+import TituloAnimado from './TituloAnimado';
 ---
 
 <!-- QUÉ ES NITEL Y ÁREAS DE COBERTURA -->
@@ -27,14 +29,22 @@ import MedioDeContactoAnimado from './MedioContactoAnimado';
           <BgLightColor2 client:visible />
 
         </div>
-        <h2 class="text-3xl font-bold tracking-tight text-white">Qué es Nitel?</h2>
-        <p class="mt-6 text-lg leading-8 text-gray-300">
-          NITEL, el servicio de internet para tu hogar. 
-        </p>
-        <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-300">
-          Conectá todos tus dispositivos y disfrutá tus actividades con el plan de internet que más te convenga. Mirá contenido, hacé videollamadas, jugá online, ¡sin límites!
-        </p>
-        <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-300">Con NITEL te aseguras de no tener cortes en el servicio y contar con una conexión estable en todo momento!</p>
+        <TituloAnimado delay={.1} client:visible>
+          <h2 class="text-3xl font-bold tracking-tight text-white">Qué es Nitel?</h2>
+        </TituloAnimado>
+        <TextoAnimado client:visible delay={.1}>
+          <p class="mt-6 text-lg leading-8 text-gray-300">
+            NITEL, el servicio de internet para tu hogar. 
+          </p>
+        </TextoAnimado>
+        <TextoAnimado client:visible delay={.2}>
+          <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-300">
+            Conectá todos tus dispositivos y disfrutá tus actividades con el plan de internet que más te convenga. Mirá contenido, hacé videollamadas, jugá online, ¡sin límites!
+          </p>
+        </TextoAnimado>
+        <TextoAnimado client:visible delay={.3}>
+          <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-300">Con NITEL te aseguras de no tener cortes en el servicio y contar con una conexión estable en todo momento!</p>
+        </TextoAnimado>
         <dl class="mt-6 sm:mt-10 space-y-4 text-base leading-7 text-gray-300">
           <MedioDeContactoAnimado client:visible>
             <div class="flex gap-x-4">
@@ -80,8 +90,12 @@ import MedioDeContactoAnimado from './MedioContactoAnimado';
       <div>
         <div class="mx-auto max-w-7xl lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="text-3xl font-bold tracking-tight text-white">Áreas de cobertura</h2>
-            <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-500">Estamos constantemente llevando nuestro servicio a nuevas zonas de Córdoba.</p>
+            <TituloAnimado client:visible delay={.3}>
+              <h2 class="text-3xl font-bold tracking-tight text-white">Áreas de cobertura</h2>
+            </TituloAnimado>
+            <TextoAnimado client:visible delay={.5}>
+              <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-500">Estamos constantemente llevando nuestro servicio a nuevas zonas de Córdoba.</p>
+            </TextoAnimado>
           </div>
           <div class="mx-auto mt-8 sm:mt-16 grid max-w-2xl grid-cols-2 gap-8 text-base leading-7 sm:gap-y-16 lg:mx-0 lg:max-w-none ">
             <div>
