@@ -6,19 +6,18 @@ import ContactanosButton from './ContactanosButton';
 import VerAreasButton from './VerAreasButton';
 import MapaCordobaDesktop from '../assets/MapaCordobaDesktop.astro';
 import MapaCordobaMobile from '../assets/MapaCordobaMobile.astro';
-import ReactComponent from '../assets/ReactComponent';
 ---
 
-<!-- <style is:global>
+<style is:global>
 
-  #cba-shadow-gradient-desktop, 
-  #cba-shadow-gradient-mobile, 
-  #lineas-adelante-desktop, 
-  #lineas-adelante-mobile {
+  #cba-shadow-mobile,
+  #lineas-adelante-mobile,
+  #cba-shadow-desktop, 
+  #lineas-adelante-desktop {
     @apply animate-maps
   }
   
-</style> -->
+</style>
 
 <div class="relative isolate overflow-hidden">
   <svg class="absolute inset-0 -z-20 h-full w-full stroke-white/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
@@ -33,7 +32,7 @@ import ReactComponent from '../assets/ReactComponent';
     <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
   </svg>
 
-  <BgLightColorHero client:visible />
+  <BgLightColorHero client:idle />
 
   <div class="mx-auto max-w-7xl px-6 pt-10 pb-16 sm:pb-32 lg:flex lg:py-32 lg:px-8 lg:mt-12">
 
@@ -71,14 +70,14 @@ import ReactComponent from '../assets/ReactComponent';
         <div class="flex flex-col gap-6 lg:gap-10">
           
           <div class="flex gap-6 flex-col lg:flex-row lg:items-center">
-            <ContactanosButton client:visible />
-            <VerAreasButton client:visible />
+            <ContactanosButton client:idle />
+            <VerAreasButton client:idle />
           </div>
 
           <!-- REDES SOCIALES EN HERO -->
           <div class="flex">
 
-            <IconoAnimado delay={.1} client:visible className="text-gray-400 hover:text-gray-500 mr-6">
+            <IconoAnimado delay={.1} client:idle className="text-gray-400 hover:text-gray-500 mr-6">
               <a href="https://www.facebook.com/nitelinternet">
                 <span class="sr-only">Facebook</span>
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -87,7 +86,7 @@ import ReactComponent from '../assets/ReactComponent';
               </a>
             </IconoAnimado>
 
-            <IconoAnimado delay={.15} client:visible className="text-gray-400 hover:text-gray-500 mr-6">
+            <IconoAnimado delay={.15} client:idle className="text-gray-400 hover:text-gray-500 mr-6">
               <a href="https://www.instagram.com/nitelinternet/">
                 <span class="sr-only">Instagram</span>
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -96,7 +95,7 @@ import ReactComponent from '../assets/ReactComponent';
               </a>
             </IconoAnimado>
 
-            <IconoAnimado delay={.20} client:visible className="text-gray-400 hover:text-gray-500">
+            <IconoAnimado delay={.20} client:idle className="text-gray-400 hover:text-gray-500">
               <a href="https://www.tiktok.com/@nitel_internet">
                 <span class="sr-only">Instagram</span>
                 <svg class="h6 w-6" viewBox="0 0 113 113" fill="currentColor">
