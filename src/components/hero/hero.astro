@@ -4,7 +4,32 @@ import BgLightColorHero from './BgLightColorHero';
 import IconoAnimado from './IconoAnimado';
 import ContactanosButton from './ContactanosButton';
 import VerAreasButton from './VerAreasButton';
+import SvgAstro from '../assets/svg-desktop.astro';
+import SvgMobileAstro from '../assets/svg-mobile.astro';
 ---
+
+
+<style is:global>
+
+  #cba-shadow-gradient-desktop, #cba-shadow-gradient, #lineas-adelante-desktop, #lineas-adelante {
+    animation: opacity-0-to-1 3s infinite;
+  }
+  
+  @keyframes opacity-0-to-1 {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0; 
+    }
+  }
+
+</style>
 
 <div class="relative isolate overflow-hidden">
   <svg class="absolute inset-0 -z-20 h-full w-full stroke-white/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
@@ -21,10 +46,10 @@ import VerAreasButton from './VerAreasButton';
 
   <BgLightColorHero client:idle />
 
-  <div class="mx-auto max-w-7xl px-6 pt-10 pb-16 sm:pb-32 lg:flex lg:py-32 lg:px-8">
+  <div class="mx-auto max-w-7xl px-6 pt-10 pb-16 sm:pb-32 lg:flex lg:py-32 lg:px-8 lg:mt-12">
 
     <!-- DATOS -->
-    <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
+    <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
 
       <!-- LOGO Y <NUEVO> -->
       <div class="flex justify-between lg:flex-col">
@@ -95,15 +120,18 @@ import VerAreasButton from './VerAreasButton';
           </div>
         </div>
         <div class="translate-y-3 lg:hidden">
-          <Picture
-            src={import("../assets/hero-picture.png")} 
+          <!-- <Picture
+            src={import("../assets/svg2.svg")} 
             fit="contain"
             widths={[156, 196]}
             sizes="(max-width: 620px) 156px, 196px"
             loading={"eager"}
             quality={100}
             alt="" 
-          />
+          /> -->
+
+          <SvgMobileAstro />
+            
         </div>
         
       </div>
@@ -111,16 +139,21 @@ import VerAreasButton from './VerAreasButton';
 
     <!-- FOTO CÓRDOBA -->
     <div class="mx-auto max-w-2xl hidden lg:inline-block lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none">
-      <div class="w-full mt-6 lg:-mt-2 relative z-10">
-        <Picture 
-          src={import("../assets/hero-picture.png")} 
+      <div class="w-full mt-6 lg:-mt-2 relative z-10 ml-20">
+        <!-- <Picture 
+          src={import("../assets/svg.svg")} 
           fit="contain"
           loading={"eager"}
-          widths={[ 600, 414 ]}
-          sizes="(max-width: 620px) 414px, 600px"
+          widths={[ 476, 414 ]}
+          sizes="(max-width: 620px) 414px, 476px"
           quality={100}
           alt="" 
-        />
+        /> -->
+
+        <SvgAstro />
+          
+          
+          
       </div>
     </div>
 
