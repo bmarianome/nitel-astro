@@ -13,7 +13,7 @@ export default function TextoAnimado(props: Props) {
       className={props.className}
       initial={{ opacity: 0 }}
       transition={{ duration: .5, ease: 'easeOut', delay: props.delay }}
-      viewport={{ once: true, margin: "800px 0px 0px 0px" }}
+      viewport={{ once: true }}
       whileInView={{ opacity: 1 }}
     >
       {props.children}
