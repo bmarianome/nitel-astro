@@ -2,7 +2,6 @@
 import BgLightColor2 from './bgLightColorContent';
 import LineaEnContenido from './LineaEnContenido';
 import MedioDeContactoAnimado from './MedioContactoAnimado';
-import TextoAnimado from './TextoAnimado';
 import TituloAnimado from './TituloAnimado';
 ---
 
@@ -26,27 +25,21 @@ import TituloAnimado from './TituloAnimado';
             <rect width="100%" height="100%" stroke-width="0" fill="url(#54f88622-e7f8-4f1d-aaf9-c2f5e46dd1f2)" />
           </svg>
           
-          <BgLightColor2 client:idle />
+          <BgLightColor2 client:visible />
 
         </div>
         <TituloAnimado delay={.1} client:idle>
           <h2 class="text-3xl font-bold tracking-tight text-white">Qué es Nitel?</h2>
         </TituloAnimado>
-        <TextoAnimado client:idle delay={.1}>
-          <p class="mt-6 text-lg leading-8 text-gray-300">
-            NITEL, el servicio de internet para tu hogar. 
-          </p>
-        </TextoAnimado>
-        <TextoAnimado client:idle delay={.2}>
-          <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-300">
-            Conectá todos tus dispositivos y disfrutá tus actividades con el plan de internet que más te convenga. Mirá contenido, hacé videollamadas, jugá online, ¡sin límites!
-          </p>
-        </TextoAnimado>
-        <TextoAnimado client:idle delay={.3}>
-          <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-300">Con NITEL te aseguras de no tener cortes en el servicio y contar con una conexión estable en todo momento!</p>
-        </TextoAnimado>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          NITEL, el servicio de internet para tu hogar. 
+        </p>
+        <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-300">
+          Conectá todos tus dispositivos y disfrutá tus actividades con el plan de internet que más te convenga. Mirá contenido, hacé videollamadas, jugá online, ¡sin límites!
+        </p>
+        <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-300">Con NITEL te aseguras de no tener cortes en el servicio y contar con una conexión estable en todo momento!</p>
         <dl class="mt-6 sm:mt-10 space-y-4 text-base leading-7 text-gray-300">
-          <MedioDeContactoAnimado client:idle>
+          <MedioDeContactoAnimado client:visible>
             <div class="flex gap-x-4">
               <dt class="flex-none">
                 <span class="sr-only">Dirección</span>
@@ -57,7 +50,7 @@ import TituloAnimado from './TituloAnimado';
               <dd>Bv. Mitre 517 - Córdoba Capital</dd>
             </div>
           </MedioDeContactoAnimado>
-          <MedioDeContactoAnimado client:idle className="mt-4" delay={.2}>
+          <MedioDeContactoAnimado client:visible className="mt-4" delay={.2}>
             <div class="flex gap-x-4">
               <dt class="flex-none">
                 <span class="sr-only">Teléfono</span>
@@ -70,7 +63,7 @@ import TituloAnimado from './TituloAnimado';
               </dd>
             </div>
           </MedioDeContactoAnimado>
-          <MedioDeContactoAnimado client:idle className="mt-4" delay={.4}>
+          <MedioDeContactoAnimado client:visible className="mt-4" delay={.4}>
             <div class="flex gap-x-4">
               <dt class="flex-none">
                 <span class="sr-only">Email</span>
@@ -90,12 +83,10 @@ import TituloAnimado from './TituloAnimado';
       <div>
         <div class="mx-auto max-w-7xl lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
-            <TituloAnimado client:idle delay={.3}>
+            <TituloAnimado client:visible delay={.3}>
               <h2 class="text-3xl font-bold tracking-tight text-white">Áreas de cobertura</h2>
             </TituloAnimado>
-            <TextoAnimado client:idle delay={.5}>
-              <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-500">Estamos constantemente llevando nuestro servicio a nuevas zonas de Córdoba.</p>
-            </TextoAnimado>
+            <p class="mt-4 sm:mt-6 text-lg leading-8 text-gray-500">Estamos constantemente llevando nuestro servicio a nuevas zonas de Córdoba.</p>
           </div>
           <div class="mx-auto mt-8 sm:mt-16 grid max-w-2xl grid-cols-2 gap-8 text-base leading-7 sm:gap-y-16 lg:mx-0 lg:max-w-none ">
             <div>
@@ -105,7 +96,7 @@ import TituloAnimado from './TituloAnimado';
               </h3>
               <address class="pt-2 pl-6 not-italic text-gray-500 relative">
 
-                <LineaEnContenido client:idle duration={1} />
+                <LineaEnContenido client:visible duration={1} />
                 
                 <p>Los Cedros </p>
                 <p>Villa Rivadavia </p>
@@ -123,7 +114,7 @@ import TituloAnimado from './TituloAnimado';
               </h3>
               <address class="pt-2 pl-6 not-italic text-gray-500 relative">
 
-                <LineaEnContenido client:idle duration={2} />
+                <LineaEnContenido client:visible duration={2} />
                 
                 <p>Salsipuedes </p> 
                 <p>Rio Ceballos </p> 
