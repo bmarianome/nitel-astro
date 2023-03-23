@@ -15,7 +15,7 @@ export default function IconoAnimado(props: Props) {
         className={props.className}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: .5, delay: props.delay }}
+        transition={{ duration: .5 }}
       >
         {props.children}
       </m.div>

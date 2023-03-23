@@ -12,7 +12,7 @@ export default function LineaEnContenido(props: Props) {
         className="inline-block absolute top-0 left-0 w-[1px] bg-white"
         initial={{ height: "0%" }}
         whileInView={{ height: '100%' }}
-        transition={{ duration: props.duration, ease: 'easeOut', delay: props.delay }}
+        transition={{ duration: props.duration, ease: 'easeOut' }}
         viewport={{ once: true }}
       >
       </m.div>

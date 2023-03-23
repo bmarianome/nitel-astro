@@ -13,7 +13,7 @@ export default function MedioDeContactoAnimado(props: Props) {
       <m.div
         className={props.className}
         initial={{ y: 50, opacity: 0 }}
-        transition={{ duration: .5, ease: 'easeOut', delay: props.delay }}
+        transition={{ duration: .5, ease: 'easeOut' }}
         viewport={{ once: true }}
         whileInView={{ y: 0, opacity: 1 }}
       >

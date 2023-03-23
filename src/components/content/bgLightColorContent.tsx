@@ -5,7 +5,7 @@ export default function bgLightColorContent() {
     <LazyMotion features={domAnimation}>
       <m.div
         initial={{ opacity: 0 }}
-        transition={{ duration: 1, delay: .5 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true, margin: "0px" }}
         whileInView={{ opacity: 1 }}
       >
