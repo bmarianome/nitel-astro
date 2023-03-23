@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { motion } from "framer-motion"
+import { m, domAnimation, LazyMotion } from "framer-motion"
 
 type Props = {
   delay?: number
@@ -10,13 +10,15 @@ type Props = {
 
 export default function IconoAnimado(props: Props) {
   return (
-    <motion.div
-      className={props.className}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: .5, delay: props.delay }}
-    >
-      {props.children}
-    </motion.div>
+    <LazyMotion features={domAnimation}>
+      <m.div
+        className={props.className}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: .5, delay: props.delay }}
+      >
+        {props.children}
+      </m.div>
+    </LazyMotion>
   )
 }

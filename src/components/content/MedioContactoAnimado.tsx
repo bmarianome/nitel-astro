@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { motion } from "framer-motion"
+import { m, domAnimation, LazyMotion } from "framer-motion"
 
 type Props = {
   children: ReactNode
@@ -9,14 +9,16 @@ type Props = {
 
 export default function MedioDeContactoAnimado(props: Props) {
   return (
-    <motion.div
-      className={props.className}
-      initial={{ y: 50, opacity: 0 }}
-      transition={{ duration: .5, ease: 'easeOut', delay: props.delay }}
-      viewport={{ once: true }}
-      whileInView={{ y: 0, opacity: 1 }}
-    >
-      {props.children}
-    </motion.div>
+    <LazyMotion features={domAnimation}>
+      <m.div
+        className={props.className}
+        initial={{ y: 50, opacity: 0 }}
+        transition={{ duration: .5, ease: 'easeOut', delay: props.delay }}
+        viewport={{ once: true }}
+        whileInView={{ y: 0, opacity: 1 }}
+      >
+        {props.children}
+      </m.div>
+    </LazyMotion>
   )
 }
