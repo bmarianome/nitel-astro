@@ -1,0 +1,24 @@
+---
+interface Props { 
+  delay: string;
+  parentClass: string; 
+};
+
+const { delay, parentClass } = Astro.props;
+---
+
+<style define:vars={{ delay }}>
+  #Icono {
+    animation: animation 1s var(--delay) forwards;
+  }
+
+  /* ANIMIATON OPACITY TO 1  */
+  @keyframes animation {
+    100% { opacity: 1 }
+  }
+  
+</style>
+
+<div class={parentClass} id='Icono'>
+  <slot />
+</div>

@@ -1,6 +1,6 @@
 ---
 import HeadTags from '../components/headTags.astro';
-import WhatsappButtonFixed from '../components/WhatsappButtonFixed';
+import WhatsappButtonFixed from '../components/WhatsappButtonFixed.astro';
 import Content from '../components/content/Content.astro';
 import Hero from '../components/hero/Hero.astro';
 ---
@@ -10,9 +10,27 @@ import Hero from '../components/hero/Hero.astro';
   
   <HeadTags />
 
+  <!-- animaciones -->
+  <style is:global>
+
+    #cba-shadow-mobile,
+    #lineas-adelante-mobile,
+    #cba-shadow-desktop, 
+    #lineas-adelante-desktop {
+      @apply animate-maps
+    }
+    
+    #BgLightColorHero,
+    #ContactanosButton {
+      @apply animate-[opacity01_.5s]
+    }
+
+
+  </style>
+
 	<body class="relative bg-gray-900">
 
-    <WhatsappButtonFixed client:idle />
+    <WhatsappButtonFixed  />
     <Hero />
     <Content />
 
