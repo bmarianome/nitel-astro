@@ -22,7 +22,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
   }
 </style>
 
-<div class="relative isolate overflow-hidden bg-gray-900 h-[100svh] lg:h-max">
+<div class="relative isolate overflow-hidden bg-gray-900 min-h-max">
 
   <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
     <defs>
@@ -42,7 +42,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
   </div>
 
   <div class="mx-auto max-w-lg lg:max-w-7xl px-6 py-10 sm:pb-32 lg:flex lg:px-8 lg:py-24">
-    <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
+    <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 lg:h-max lg:items-stretch lg:w-1/2">
       <Picture
         class="opacity-0 animate-[animation_.5s_.25s_forwards]"
         src={import("../assets/logo-nitel-full-word.png")}
@@ -62,7 +62,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
       </div>
 
       <p class="mt-8 text-lg leading-8 text-gray-300 hidden lg:inline-block lg:mt-8">
-        Nitel es un proveedor de internet para Córdoba, de forma inalámbrica o con fibra óptica.
+        Somos el internet que te mereces
       </p>
 
       <div class="flex flex-col gap-6 lg:gap-10">
@@ -169,8 +169,8 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
 
     </div>
 
-    <div class="hidden w-full lg:flex justify-end">
-      <div class="">
+    <div class="hidden lg:inline-block w-full relative">
+      <div class="absolute w-full h-full top-0 left-0 flex justify-center">
         <MapaCordobaDesktop />
       </div>
     </div>
