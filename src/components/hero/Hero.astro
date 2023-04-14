@@ -61,11 +61,11 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
   </div>
 
   <div
-    class="mx-auto max-w-7xl px-6 pt-10 pb-16 sm:pb-32  lg:py-32 lg:px-8 h-[100svh] 
+    class="mx-auto max-w-7xl px-6 pt-10 pb-16 sm:pb-32  lg:py-32 lg:px-8 h-[100svh] lg:h-max
     lg:flex lg:gap-32"
   >
     <!-- DATOS -->
-    <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
+    <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:h-max">
       <!-- LOGO Y <NUEVO> -->
       <div class="flex justify-between lg:flex-col ">
         <Picture
@@ -252,7 +252,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
     <div
       class="mx-auto max-w-2xl hidden lg:inline-block lg:ml-0 lg:mt-0 lg:mr-0 lg:max-w-none"
     >
-      <div class="w-full relative z-10 lg:h-full lg:min-h-[512px] lg:-mt-4">
+      <div class="w-full relative z-10 lg:h-full lg:min-h-[512px] lg:max-h-[576px] xl:max-h-none lg:-mt-4">
         <MapaCordobaDesktop />
       </div>
     </div>
