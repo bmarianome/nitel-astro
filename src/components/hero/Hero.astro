@@ -61,16 +61,16 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
   </div>
 
   <div
-    class="mx-auto max-w-7xl px-6 pt-10 pb-16 sm:pb-32 lg:flex lg:py-32 lg:px-8 h-[100svh]"
+    class="mx-auto max-w-7xl px-6 pt-10 pb-16 sm:pb-32  lg:py-32 lg:px-8 h-[100svh] 
+    lg:flex lg:gap-32"
   >
     <!-- DATOS -->
     <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
       <!-- LOGO Y <NUEVO> -->
-      <div class="flex justify-between lg:flex-col">
+      <div class="flex justify-between lg:flex-col ">
         <Picture
           class='opacity-0 animate-[animation_.5s_.25s_forwards]'
           src={import("../assets/logo-nitel-full-word.png")}
-          fit="contain"
           loading={"eager"}
           widths={[320, 200]}
           sizes="(max-width: 620px) 200px, 320px"
@@ -250,9 +250,9 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
 
     <!-- FOTO CÓRDOBA -->
     <div
-      class="mx-auto max-w-2xl hidden lg:inline-block lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none"
+      class="mx-auto max-w-2xl hidden lg:inline-block lg:ml-0 lg:mt-0 lg:mr-0 lg:max-w-none"
     >
-      <div class="w-full mt-6 lg:-mt-4 relative z-10 ml-20">
+      <div class="w-full relative z-10 lg:h-full lg:min-h-[512px] lg:-mt-4">
         <MapaCordobaDesktop />
       </div>
     </div>
