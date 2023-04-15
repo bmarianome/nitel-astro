@@ -85,26 +85,28 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
           class="opacity-0 animate-[animation_.5s_.25s_forwards] scale-on-height"
           src={import("../assets/logo-nitel-full-word.png")}
           loading={"eager"}
-          widths={[320, 200]}
-          sizes="(max-width: 620px) 200px, 320px"
+          widths={[320, 188]}
+          sizes="(max-width: 620px) 188px, 320px"
           quality={100}
           format="webp"
           alt=""
         />
   
         <div class="scale-on-height relative w-max h-max opacity-0 animate-[animation_.5s_.5s_forwards]" id="TituloHero">
-          <h1 class="mt-8 reduce-margin-top-on-height text-5xl lg:text-7xl uppercase italic font-bold tracking-tight text-white sm:text-6xl w-max h-max">Te conecta</h1>
+          <h1 class="mt-6 lg:mt-8 reduce-margin-top-on-height text-5xl lg:text-7xl uppercase italic font-bold tracking-tight text-white sm:text-6xl w-max h-max">
+            Te conecta
+          </h1>
           <div class="text-5xl lg:text-7xl uppercase italic font-bold tracking-tight text-white sm:text-6xl absolute inset-0 text-gradient animate-maps">
             Te conecta
           </div>
         </div>
   
-        <p class="slot-machine-animation mt-8 reduce-margin-top-on-height text-lg leading-8 text-gray-300 hidden lg:inline-block lg:mt-8">
+        <p class="slot-machine-animation mt-6 reduce-margin-top-on-height text-lg leading-8 text-gray-300 hidden lg:inline-block lg:mt-8">
           Somos el internet que te mereces
         </p>
   
         <div class="flex flex-col gap-6 lg:gap-10">
-          <dl class="mt-8 reduce-margin-top-on-height space-y-4 text-base leading-7 text-gray-300">
+          <dl class="mt-6 sm:mt-8 reduce-margin-top-on-height space-y-4 text-base leading-7 text-gray-300">
             <div class="flex gap-x-4 lg:gap-x-6">
               <dt class="flex-none">
                 <span class="sr-only">Dirección</span>
@@ -156,8 +158,8 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
         </div>
   
         <div class="flex justify-between items-end lg:mt-8 reduce-margin-top-on-height">
-          <div class="flex flex-col gap-6 lg:gap-10">
-            <div class="flex gap-6 flex-col lg:flex-row lg:items-center">
+          <div class="flex flex-col gap-4 sm:gap-6 lg:gap-10">
+            <div class="flex gap-4 sm:gap-6 flex-col lg:flex-row lg:items-center">
               <ContactanosButton />
               <VerAreasButton />
             </div>
