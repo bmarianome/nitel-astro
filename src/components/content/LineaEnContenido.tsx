@@ -13,7 +13,6 @@ export default function LineaEnContenido(props: Props) {
         initial={{ height: "0%" }}
         whileInView={{ height: '100%' }}
         transition={{ duration: props.duration, ease: 'easeOut', delay: props.delay }}
-        viewport={{ once: true }}
       >
       </m.div>
     </LazyMotion>

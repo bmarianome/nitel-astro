@@ -14,7 +14,6 @@ export default function TituloAnimado(props: Props) {
         className={props.className}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: .5 }}
-        viewport={{ once: true }}
         whileInView={{ opacity: 1, x: 0 }}
       >
         {props.children}
