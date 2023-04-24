@@ -6,20 +6,21 @@ import Hero from "../components/hero/Hero.astro";
 import CTA from "../components/CTA.astro";
 import BgLightColorHero from "../components/hero/BgLightColorHero.astro";
 import Footer from "../components/Footer.astro";
+import AreasDeCoberturaButton from "../components/AreasDeCoberturaButton";
+import VerAreasSlide from "../components/VerAreasSlide";
 ---
 
 <!DOCTYPE html>
 <html lang="es">
   <head>
-
     <script defer data-domain="nitel-2.vercel.app" src="https://plausible.bmariano.me/js/script.js"></script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#111827" />
 
-    <title>Nitel: internet para tu hogar</title>
+    <title>Nitel te conecta</title>
     <meta
       name="description"
       content="Conectá todos tus dispositivos y disfrutá tus actividades con el plan de internet que más te convenga. Mirá contenido, hacé videollamadas, jugá online, ¡sin límites!"
@@ -54,6 +55,17 @@ import Footer from "../components/Footer.astro";
         filter: drop-shadow(0px 0px 10px #01dcfd);
       }
 
+      #VerAreasButton {
+        @apply animate-[animationVerAreasButton_.25s_.375s_forwards];
+      }
+
+      @keyframes animationVerAreasButton {
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
       .gradient {
         background: linear-gradient(to top left, #35068c 0%, #4208a3 14.28%, #770eff 28.57%, #5d3cff 42.85%, #3580fd 57.13%, #2897fd 71.41%, #01dcfd 86.21%);
       }
@@ -81,8 +93,11 @@ import Footer from "../components/Footer.astro";
     }
   </style>
 
-  <body class="bg-gray-900">
+  <body class="bg-gray-900 relative">
+
+
     <div class="relative overflow-hidden isolate">
+      <VerAreasSlide client:load />
       <WhatsappButtonFixed />
       <Hero />
       <Content />

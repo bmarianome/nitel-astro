@@ -3,7 +3,7 @@ import { Image, Picture } from "@astrojs/image/components";
 import BgLightColorHero from "./BgLightColorHero.astro";
 import IconoAnimado from "./IconoAnimado.astro";
 import ContactanosButton from "./ContactanosButton.astro";
-import VerAreasButton from "./VerAreasButton.astro";
+import VerAreasButton from "./VerAreasButton";
 import MapaCordobaDesktop from "../assets/MapaCordobaDesktop.astro";
 import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
 ---
@@ -161,7 +161,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
           <div class="flex flex-col gap-4 sm:gap-6 lg:gap-10">
             <div class="flex gap-4 sm:gap-6 flex-col lg:flex-row lg:items-center">
               <ContactanosButton />
-              <VerAreasButton />
+              <VerAreasButton client:load />
             </div>
   
             <!-- REDES SOCIALES EN HERO -->
