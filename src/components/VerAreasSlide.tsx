@@ -11,7 +11,7 @@ const VerAreasSlide = () => {
   
   return (
     <div
-      className={`bg-gray-900 w-screen px-6 pb-16 pt-12 sm:pb-32 lg:py-16 lg:px-8 lg:inline-block
+      className={`bg-gray-900 lg:hidden w-screen px-6 pb-16 pt-12 sm:pb-32 lg:py-16 lg:px-8 lg:inline-block
               ${isOpen ? "translate-y-0" : "-translate-y-full"} duration-200 fixed top-0 z-[1928073]
             `}
       id="AreasDeCobertura">
