@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
 import { motion, m, LazyMotion, domAnimation } from "framer-motion"
 
+
 const LogoAnimado = ({ children }: { children: ReactNode }) => {
+  
   return (
     <motion.div
       // className={}

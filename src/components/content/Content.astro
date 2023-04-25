@@ -1,29 +1,28 @@
 ---
 import AreasDeCoberturaButton from "../AreasDeCoberturaButton";
 import Footer from "../Footer.astro";
-import BgLightColor2 from "./bgLightColorContent";
+import VerAreasSlide from "../VerAreasSlide";
 import LineaEnContenido from "./LineaEnContenido";
-import LogoAnimado from "./LogoAnimado";
-import MedioDeContactoAnimado from "./MedioContactoAnimado";
+import LogoYTituloContent from "./LogoYTituloContent";
 import TituloAnimado from "./TituloAnimado";
-import { Image, Picture } from "@astrojs/image/components";
+import LogoContent from "./LogoContent.astro";
 ---
 
 <!-- QUÉ ES NITEL Y ÁREAS DE COBERTURA -->
-<div class="relative isolate overflow-hidden">
+
+
+
+<div class="relative isolate overflow-hidden" id="AreasDeCobertura">
   <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
     <div class="h-[100lvh] lg:h-max relative px-6 pt-16 pb-12 sm:pt-32 lg:static lg:py-16 lg:px-8">
-      <div class="mx-auto max-w-lg lg:mx-0">
+      <div class="mx-auto max-w-lg lg:mx-0 overflow-hidden">
 
-        <LogoAnimado client:load>
-          <div class="flex justify-center w-full">
-            <Image src={import("../assets/logo-nitel.png")} loading={"eager"} quality={100} class="w-2/3 lg:w-1/3" format="webp" alt="" />
-          </div>
-        </LogoAnimado>
+        <VerAreasSlide client:load />
 
-        <h2 class="text-2xl font-bold tracking-tight text-white sm:text-4xl mt-6 lg:mt-8">
-          Contáctate y nosotros te asesoramos para que tengas el plan que necesitas
-        </h2>
+        <LogoYTituloContent client:load >
+          <LogoContent />
+        </LogoYTituloContent>
+
 
         <div class="mt-8 lg:mt-12 flex items-center justify-center gap-x-6 lg:justify-start">
           <a
@@ -40,12 +39,8 @@ import { Image, Picture } from "@astrojs/image/components";
       </div>
     </div>
 
-
     <!-- ÁREAS DE COBERTURA DESKTOP -->
-    <div 
-      class="px-6 pb-16 pt-12 sm:pb-32 lg:py-16 lg:px-8  hidden lg:inline-block" 
-      id="AreasDeCobertura"
-    >
+    <div class="px-6 pb-16 pt-12 sm:pb-32 lg:py-16 lg:px-8 hidden lg:inline-block" id="AreasDeCobertura">
       <div>
         <div class="mx-auto max-w-7xl lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">

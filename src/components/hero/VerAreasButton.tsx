@@ -10,7 +10,11 @@ const VerAreasButton = () => {
     <button id='VerAreasButton'
       className="text-sm font-semibold leading-6 text-white hover:underline translate-x-[-100px] opacity-0"
       onClick={() => {
-        isCartOpen.set(!isOpen)
+        setTimeout(() => {
+          isCartOpen.set(!isOpen)
+        }, 250);
+        const element = document.getElementById('AreasDeCobertura');
+        element?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
       }}
     >
       Ver áreas de cobertura 

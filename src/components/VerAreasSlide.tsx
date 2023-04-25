@@ -8,13 +8,12 @@ import { isCartOpen } from "./SlideState";
 const VerAreasSlide = () => {
 
   const isOpen = useStore(isCartOpen);
-  
+
   return (
     <div
-      className={`bg-gray-900 lg:hidden w-screen px-6 pb-16 pt-12 sm:pb-32 lg:py-16 lg:px-8
-              ${isOpen ? "translate-y-0" : "-translate-y-full"} duration-200 fixed top-0 z-[1928073]
-            `}
-      id="AreasDeCobertura">
+      className={` w-screen px-6 pb-16 pt-12 sm:pb-32 lg:py-16 lg:px-8
+        ${isOpen ? "translate-y-0" : "-translate-y-full"} lg:hidden duration-200 absolute left-0 top-0 w-full z-[1928073]
+      `}>
       <div>
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
