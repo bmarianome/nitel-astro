@@ -1,6 +1,5 @@
 ---
-import { Image, Picture } from "@astrojs/image/components";
-import BgLightColorHero from "./BgLightColorHero.astro";
+import { Picture } from "@astrojs/image/components";
 import IconoAnimado from "./IconoAnimado.astro";
 import ContactanosButton from "./ContactanosButton.astro";
 import VerAreasButton from "./VerAreasButton";
@@ -9,70 +8,48 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
 ---
 
 <style>
-  @keyframes animation {
-    0% {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 
   .slot-machine-animation {
-    animation: typing 2s steps(17) forwards, blink .75s step-end infinite;
-    @apply block whitespace-nowrap border-r-2 w-[11ch] overflow-hidden 
+    animation: typing 2s steps(17) forwards, blink 0.75s step-end infinite;
+    @apply block whitespace-nowrap border-r-2 w-[11ch] overflow-hidden;
   }
 
-  @keyframes typing { 
+  @keyframes typing {
     from {
-      @apply w-0
+      @apply w-0;
     }
     to {
-      @apply border-r-0 border-transparent
+      @apply border-r-0 border-transparent;
     }
   }
 
   @keyframes blink {
     50% {
-      @apply border-r-transparent
+      @apply border-r-transparent;
     }
   }
 
   @media (max-height: 600px) {
     .hidden-on-height {
-      @apply hidden
+      @apply hidden;
     }
 
-    .  {
-      @apply scale-75
+    . {
+      @apply scale-75;
     }
 
     .reduce-margin-top-on-height {
-      @apply mt-6
+      @apply mt-6;
     }
   }
-
 </style>
-
 
 <div class="relative isolate overflow-hidden h-[100svh] min-h-max">
 
-  <div
-    class="hidden lg:inline-block absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
-    aria-hidden="true">
-    <div
-      class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
-      style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)">
-    </div>
-  </div>
-
   <div class="lg:absolute w-full h-full top-0 left-0 flex items-start lg:items-center">
-
     <div class="w-full mx-auto max-w-lg lg:max-w-7xl px-6 py-10 sm:pb-32 lg:flex lg:px-8 lg:py-0 lg:w-full">
       <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:h-max lg:items-stretch lg:w-1/2">
+        <!-- LOGO -->
         <Picture
           class="opacity-0 animate-[animation_.5s_.25s_forwards] scale-on-height"
           src={import("../assets/logo-nitel-full-word.png")}
@@ -83,22 +60,23 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
           format="webp"
           alt=""
         />
-  
-        <div class=" scale-on-height relative w-max h-max opacity-0 animate-[animation_.5s_.5s_forwards]" id="TituloHero">
-          <h1 class="overflow-hidden mt-6 lg:mt-8 reduce-margin-top-on-height text-4xl sm:text-6xl uppercase italic font-bold tracking-tight text-white  w-max h-max">
+
+        <!-- TITULO -->
+        <div class="scale-on-height relative w-max h-max opacity-0 animate-[animation_.5s_.5s_forwards]" id="TituloHero">
+          <h1
+            class="overflow-hidden mt-6 lg:mt-8 reduce-margin-top-on-height text-4xl sm:text-6xl uppercase italic font-bold tracking-tight text-white w-max h-max">
             Internet / Calidad
           </h1>
-          <div class="overflow-hidden text-4xl sm:text-6xl uppercase italic font-bold tracking-tight text-white  absolute inset-0 text-gradient animate-maps">
+          <div class="overflow-hidden text-4xl sm:text-6xl uppercase italic font-bold tracking-tight text-white absolute inset-0 text-gradient animate-maps">
             Internet / Calidad
           </div>
         </div>
-  
-          <p class="slot-machine-animation mt-6 reduce-margin-top-on-height text-lg leading-8 text-gray-300 hidden lg:inline-block lg:mt-8">
-            <a class="underline" href="https://wa.me/+543516472777/?text=Hola, quiero realizar una consulta">
-              Unite ahora.
-            </a>
-          </p>
-  
+        
+        <p class="slot-machine-animation mt-6 reduce-margin-top-on-height text-lg leading-8 text-gray-300 hidden lg:inline-block lg:mt-8">
+          <a class="underline" href="https://wa.me/+543516472777/?text=Hola, quiero realizar una consulta"> Unite ahora.</a>
+        </p>
+
+        <!-- CONTACTO -->
         <div class="flex flex-col gap-6 lg:gap-10">
           <dl class="mt-6 sm:mt-8 reduce-margin-top-on-height space-y-4 text-base leading-7 text-gray-300">
             <div class="flex gap-x-4 lg:gap-x-6">
@@ -116,7 +94,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
                 <span>Bv. Mitre 517 - Córdoba Capital</span>
               </dd>
             </div>
-  
+
             <div class="flex gap-x-4 lg:gap-x-6 mt-4">
               <dt class="flex-none">
                 <span class="sr-only">Email</span>
@@ -132,7 +110,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
                 <a class="hover:text-white" href="mailto:comercial@nitel.com.ar">comercial@nitel.com.ar</a>
               </dd>
             </div>
-  
+
             <div class="flex gap-x-4 lg:gap-x-6 mt-4">
               <dt class="flex-none">
                 <span class="sr-only">Teléfono</span>
@@ -150,14 +128,15 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
             </div>
           </dl>
         </div>
-  
+
+        <!-- BOTÓN, ÁREAS Y REDES. MOBILE: MAP -->
         <div class="flex justify-between items-end lg:mt-8 reduce-margin-top-on-height">
           <div class="flex flex-col gap-4 sm:gap-6 lg:gap-10">
             <div class="flex gap-4 sm:gap-6 flex-col lg:flex-row lg:items-center">
               <ContactanosButton />
-              <VerAreasButton client:load />
+              <VerAreasButton />
             </div>
-  
+
             <!-- REDES SOCIALES EN HERO -->
             <div class="flex hidden-on-height">
               <IconoAnimado delay=".1s" parentClass="opacity-0 text-gray-400 hover:text-gray-500 mr-6">
@@ -171,7 +150,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
                   </svg>
                 </a>
               </IconoAnimado>
-  
+
               <IconoAnimado delay=".15s" parentClass="opacity-0 text-gray-400 hover:text-gray-500 mr-6">
                 <a href="https://www.instagram.com/nitelinternet/">
                   <span class="sr-only">Instagram</span>
@@ -183,7 +162,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
                   </svg>
                 </a>
               </IconoAnimado>
-  
+
               <IconoAnimado delay=".20s" parentClass="opacity-0 text-gray-400 hover:text-gray-500">
                 <a href="https://www.tiktok.com/@nitel_internet">
                   <span class="sr-only">Instagram</span>
@@ -200,16 +179,15 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
             <MapaCordobaMobile />
           </div>
         </div>
-  
+
       </div>
-  
+
+      <!-- MAP DESKTOP -->
       <div class="hidden lg:inline-block w-full relative">
         <div class="absolute w-full h-full top-0 left-0 flex justify-center">
           <MapaCordobaDesktop />
         </div>
       </div>
     </div>
-
   </div>
-
 </div>
