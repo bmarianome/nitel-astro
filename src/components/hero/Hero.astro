@@ -2,8 +2,8 @@
 import { Picture } from "@astrojs/image/components";
 import IconoAnimado from "./IconoAnimado.astro";
 import VerAreasButton from "./VerAreasButton";
-import MapaCordobaDesktop from "../assets/MapaCordobaDesktop.astro";
-import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
+import MapaCordobaDesktop from "../../assets/MapaCordobaDesktop.astro";
+import MapaCordobaMobile from "../../assets/MapaCordobaMobile.astro";
 ---
 
 <style>
@@ -49,7 +49,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
         <!-- LOGO -->
         <Picture
           class="opacity-0 animate-[animation_.5s_.25s_forwards] scale-on-height"
-          src={import("../assets/logo-nitel-full-word.png")}
+          src={import("../../assets/logo-nitel-full-word.png")}
           loading={"eager"}
           widths={[320, 188]}
           sizes="(max-width: 620px) 188px, 320px"
@@ -132,7 +132,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
             <div class="flex gap-4 sm:gap-6 flex-col lg:flex-row lg:items-center">
 
               <a
-                id="ContactanosButton"
+                id="ContactanosButton" target="_blank" rel='noreferrer'
                 href="https://wa.me/+543516472777/?text=Hola, quiero realizar una consulta"
                 class="animate-[opacity01_.5s] relative z-10 gradient w-max rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm">
                 Quiero asesoramiento
@@ -144,7 +144,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
             <!-- REDES SOCIALES EN HERO -->
             <div class="flex hidden-on-height">
               <IconoAnimado delay=".1s" parentClass="opacity-0 text-gray-400 hover:text-gray-500 mr-6">
-                <a href="https://www.facebook.com/nitelinternet">
+                <a href="https://www.facebook.com/nitelinternet" target="_blank" rel='noreferrer'>
                   <span class="sr-only">Facebook</span>
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -156,7 +156,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
               </IconoAnimado>
 
               <IconoAnimado delay=".15s" parentClass="opacity-0 text-gray-400 hover:text-gray-500 mr-6">
-                <a href="https://www.instagram.com/nitelinternet/">
+                <a href="https://www.instagram.com/nitelinternet/" target="_blank" rel='noreferrer'>
                   <span class="sr-only">Instagram</span>
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -168,7 +168,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
               </IconoAnimado>
 
               <IconoAnimado delay=".20s" parentClass="opacity-0 text-gray-400 hover:text-gray-500">
-                <a href="https://www.tiktok.com/@nitel_internet">
+                <a href="https://www.tiktok.com/@nitel_internet" target="_blank" rel='noreferrer'>
                   <span class="sr-only">Instagram</span>
                   <svg class="h6 w-6" viewBox="0 0 113 113" fill="currentColor">
                     <path
