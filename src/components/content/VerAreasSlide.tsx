@@ -10,37 +10,33 @@ const VerAreasSlide = () => {
   return (
     <div
       className={`w-screen px-6 pb-16 pt-12 sm:pb-32 
-      ${isOpen ? "translate-y-0" : "-translate-y-full"} duration-200 absolute left-0 top-0 w-full z-[1928073]
+      ${isOpen ? "translate-y-0" : "-translate-y-full"} duration-200 absolute left-0 top-0 w-full z-[100]
         lg:w-full lg:translate-y-0 lg:static lg:py-16 lg:px-8
       `}>
 
       <div className="lg:inline-block lg:px-8 lg:w-full" id="AreasDeCobertura">
 
         {/* TÍTULO */}
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <TituloAnimado delay={0.3}>
-            <h2 className="text-3xl font-bold tracking-tight text-white flex justify-between w-full items-center">Áreas de cobertura
-              <svg
-                onClick={() => isCartOpen.set(false)}
-                className="inline-block ml-2 w-6 h-6 text-white cursor-pointer lg:hidden"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-
-
-            </h2>
-          </TituloAnimado>
-        </div>
+        <TituloAnimado delay={0} className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight text-white flex justify-between w-full items-center">Áreas de cobertura
+            <svg
+              onClick={() => isCartOpen.set(false)}
+              className="inline-block ml-2 w-6 h-6 text-white cursor-pointer lg:hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </h2>
+        </TituloAnimado>
 
         {/* ÁREAS */}
         <div className="mx-auto mt-8 sm:mt-16 grid max-w-2xl grid-cols-2 gap-8 text-base leading-7 sm:gap-y-16 lg:mx-0 lg:max-w-none">

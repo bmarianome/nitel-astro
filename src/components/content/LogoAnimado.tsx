@@ -7,13 +7,12 @@ const LogoAnimado = ({ children }: { children: ReactNode }) => {
   return (
     <motion.div
       // className={}
-      transition={{ duration: .5, ease: 'linear' }}
+      // transition={{ duration: 0.1 }}
       initial={{ opacity: 0 }}
       viewport={{ once: true }}
       whileInView={{
         opacity: 1,
         scale: [.5, 1],
-        // rotate: [0, 360],
       }}
     >
       {children}

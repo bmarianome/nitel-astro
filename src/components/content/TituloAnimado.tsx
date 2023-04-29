@@ -13,7 +13,7 @@ export default function TituloAnimado(props: Props) {
       <m.div
         className={props.className}
         initial={{ opacity: 0, x: 100 }}
-        transition={{ duration: .5 }}
+        transition={{ duration: .5, ease: 'linear' }}
         whileInView={{ opacity: 1, x: 0 }}
       >
         {props.children}

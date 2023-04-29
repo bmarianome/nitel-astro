@@ -1,14 +1,12 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import IconoAnimado from "./IconoAnimado.astro";
-import ContactanosButton from "./ContactanosButton.astro";
 import VerAreasButton from "./VerAreasButton";
 import MapaCordobaDesktop from "../assets/MapaCordobaDesktop.astro";
 import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
 ---
 
 <style>
-
   .slot-machine-animation {
     animation: typing 2s steps(17) forwards, blink 0.75s step-end infinite;
     @apply block whitespace-nowrap border-r-2 w-[11ch] overflow-hidden;
@@ -45,7 +43,6 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
 </style>
 
 <div class="relative isolate overflow-hidden h-[100svh] min-h-max">
-
   <div class="lg:absolute w-full h-full top-0 left-0 flex items-start lg:items-center">
     <div class="w-full mx-auto max-w-lg lg:max-w-7xl px-6 py-10 sm:pb-32 lg:flex lg:px-8 lg:py-0 lg:w-full">
       <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:h-max lg:items-stretch lg:w-1/2">
@@ -71,7 +68,7 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
             Internet / Calidad
           </div>
         </div>
-        
+
         <p class="slot-machine-animation mt-6 reduce-margin-top-on-height text-lg leading-8 text-gray-300 hidden lg:inline-block lg:mt-8">
           <a class="underline" href="https://wa.me/+543516472777/?text=Hola, quiero realizar una consulta"> Unite ahora.</a>
         </p>
@@ -133,8 +130,15 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
         <div class="flex justify-between items-end lg:mt-8 reduce-margin-top-on-height">
           <div class="flex flex-col gap-4 sm:gap-6 lg:gap-10">
             <div class="flex gap-4 sm:gap-6 flex-col lg:flex-row lg:items-center">
-              <ContactanosButton />
-              <VerAreasButton />
+
+              <a
+                id="ContactanosButton"
+                href="https://wa.me/+543516472777/?text=Hola, quiero realizar una consulta"
+                class="animate-[opacity01_.5s] relative z-10 gradient w-max rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm">
+                Quiero asesoramiento
+              </a>
+
+              <VerAreasButton client:load />
             </div>
 
             <!-- REDES SOCIALES EN HERO -->
@@ -179,7 +183,6 @@ import MapaCordobaMobile from "../assets/MapaCordobaMobile.astro";
             <MapaCordobaMobile />
           </div>
         </div>
-
       </div>
 
       <!-- MAP DESKTOP -->
